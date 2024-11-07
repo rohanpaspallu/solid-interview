@@ -7,6 +7,7 @@ import {
   View,
   FlatList,
 } from "react-native";
+import { AppStyles as styles } from "./AppStyles";
 
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState("#fff");
@@ -49,35 +50,3 @@ export default function App() {
     </TouchableWithoutFeedback>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  centeredContent: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 24,
-    color: "#000",
-  },
-  colorList: {
-    flex: 1,
-  },
-  colorListContent: {
-    paddingTop: 20,
-    alignItems: "center",
-  },
-  colorItem: {
-    padding: 10,
-    marginVertical: 5,
-    alignItems: "center",
-    borderRadius: 5,
-    width: "80%",
-  },
-  colorText: {
-    color: "#fff",
-  },
-});
