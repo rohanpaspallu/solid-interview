@@ -8,19 +8,11 @@ import {
   FlatList,
 } from "react-native";
 import { AppStyles as styles } from "./AppStyles";
+import { randomColor } from "./util";
 
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState("#fff");
   const [oldColors, setOldColors] = useState([]);
-
-  const randomColor = () => {
-    const letters = "0123456789ABCDEF";
-    let color = "";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return `#${color}`;
-  };
 
   const handlePress = () => {
     const newColor = randomColor();
